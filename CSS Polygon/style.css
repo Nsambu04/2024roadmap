@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    justify-content: center;
+    background-color: lightyellow;
+    position: relative;
+    height: 100vh;
+    margin: 0;
+}
+
+body::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+    left: 20%;
+    background-color: lightgreen;
+    z-index: -1;   
+    clip-path: polygon(
+        30% 0,
+        100% 0,
+        100% 100%,
+        20% 100%
+    )
+}
+
+h1 {
+    font-size: 2.5rem;
+    max-width: 500px;
+    text-align: center;
+    color: orange;
+    margin-top: 100px;
+    mix-blend-mode:difference;
+}
